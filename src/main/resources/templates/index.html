@@ -203,13 +203,11 @@ Modal-->
 			<thead>
 				<tr>
                                     <th class="not_mapped_style" style="text-align:center">Glycan Image</th>
-					<th class="not_mapped_style" style="text-align:center"><a th:href="@{'/MySQLTableForGlycansAndCCS/' + ${currentPage} + '?sortField=databaseID&sortDir=' + ${reverseSortDir}}">Database ID</a></th>
+					<th class="not_mapped_style" style="text-align:center"><a th:href="@{'/MySQLTableForGlycansAndCCS/' + ${currentPage} + '?sortField=databaseid&sortDir=' + ${reverseSortDir}}">Database ID</a></th>
                                         <th class="not_mapped_style" style="text-align:center"><a th:href="@{'/MySQLTableForGlycansAndCCS/' + ${currentPage} + '?sortField=oxford&sortDir=' + ${reverseSortDir}}">Oxford</a></th>
 					<th class="not_mapped_style" style="text-align:center"><a th:href="@{'/MySQLTableForGlycansAndCCS/' + ${currentPage} + '?sortField=neutralmass&sortDir=' + ${reverseSortDir}}">Neutral mass</a></th>
-					<th class="not_mapped_style" style="text-align:center"><a th:href="@{'/MySQLTableForGlycansAndCCS/' + ${currentPage} + '?sortField=observedmz&sortDir=' + ${reverseSortDir}}">Observed m/z</a></th>
-                                        <th class="not_mapped_style" style="text-align:center"><a th:href="@{'/MySQLTableForGlycansAndCCS/' + ${currentPage} + '?sortField=ccs1&sortDir=' + ${reverseSortDir}}">CCS [M+2H] charge 2</a></th>
-					<th class="not_mapped_style" style="text-align:center"><a th:href="@{'/MySQLTableForGlycansAndCCS/' + ${currentPage} + '?sortField=observedmz2&sortDir=' + ${reverseSortDir}}">Observed m/z 2</a></th>
-					<th class="not_mapped_style" style="text-align:center"><a th:href="@{'/MySQLTableForGlycansAndCCS/' + ${currentPage} + '?sortField=ccs2&sortDir=' + ${reverseSortDir}}">CCS [M+H+Na] charge 2</a></th>
+					<th class="not_mapped_style" style="text-align:center"><a th:href="@{'/MySQLTableForGlycansAndCCS/' + ${currentPage} + '?sortField=subdir&sortDir=' + ${reverseSortDir}}">Subdir</a></th>
+                                        <th class="not_mapped_style" style="text-align:center"><a th:href="@{'/MySQLTableForGlycansAndCCS/' + ${currentPage} + '?sortField=experimentdetails&sortDir=' + ${reverseSortDir}}">Experiment Details</a></th>
 					<th class="not_mapped_style" style="text-align:center">Update Entry</th>
 					<th class="not_mapped_style" style="text-align:center">Delete Entry</th>
 				</tr>
@@ -243,8 +241,8 @@ Modal-->
                             <td th:text="${glycan.databaseID}"></td>
                             <td th:text="${glycan.oxford}"></td>
 					<td th:text="${glycan.neutralmass}"></td>
-                                        <td th:text="${glycan.observedmz}"></td>
-					<td th:text="${glycan.ccs1}"></td>
+                                        <td th:text="${glycan.subdir}"></td>
+					<td th:text="${glycan.experimentdetails}"></td>
 					<td th:text="${glycan.observedmz2}"></td>
                                         <td th:text="${glycan.ccs2}"></td>
 					<td>
