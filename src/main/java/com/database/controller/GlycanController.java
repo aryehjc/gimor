@@ -17,7 +17,7 @@ public class GlycanController {
     GlycanService glycanService;
 
     //	display list of glycans
-    @GetMapping("/search")
+    @GetMapping("/MySQLTableForGlycansAndCCS")
     // This means that this method will be executed when user sends GET Requests to "/"
     // In our case, "http://localhost:8080/"
     public String viewHomePage(Model model) {
