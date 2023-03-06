@@ -219,8 +219,13 @@ Modal-->
                         <tr th:each="glycan: ${listGlycans}">
                             
                             <td>
+<<<<<<< HEAD
                                 <a id="photoButton" class="fragmentation" th:href="@{'/img/glycans/' + ${glycan.databaseid} + '.png'}">
                                 <img th:src="@{'/img/glycans/' + ${glycan.databaseid} + '.png'}" style="width: 150px" id="clicktofragment" title="Click to enlarge image" onerror="this.onerror=null;this.src='/img/glycans/errorMessageWrongExtension3.png';"/>
+=======
+                                <a id="photoButton" class="fragmentation" th:href="@{'/img/glycans/' + ${glycan.databaseID} + '.png'}">
+                                <img th:src="@{'/img/glycans/' + ${glycan.databaseID} + '.png'}" style="width: 150px" id="clicktofragment" title="Click to enlarge image" onerror="this.onerror=null;this.src='/img/glycans/errorMessageWrongExtension3.png';"/>
+>>>>>>> c8ed9d33601d121b324f469e5c0d9a6c5b779a9a
                                 </a>
                                 
                                 
@@ -229,6 +234,7 @@ Modal-->
    
 
                                     <div class="fragmentButton">  
+<<<<<<< HEAD
                                         <input name="glycanid" th:value="${glycan.databaseid}" class="btn btn-success btn-sm" title="Click to fragment glycan" style="display:none"></input>                
                                             
                                     </div>     
@@ -239,10 +245,27 @@ Modal-->
                             </td> <!-- This manages to bypass the pagination error where images not pathed properly. Dynamically displays image based on oxford number!, just match property to imgname in static, removed column glycan_photo from sql, add back if needed. Either this or 
                             <td> <a th:href="@{'/img/glycans/' + ${glycan.databaseid} + '.png'}"></a></td> -->
                             <td th:text="${glycan.databaseid}"></td>
+=======
+                                        <input name="glycanid" th:value="${glycan.databaseID}" class="btn btn-success btn-sm" title="Click to fragment glycan" style="display:none"></input>                
+                                            
+                                    </div>     
+
+                                    <button class="btn btn-success btn-sm" th:value="${glycan.databaseID}" title="Click to fragment glycan" id="fragbutton">Fragment</button>
+                                </form>
+                                
+                            </td> <!-- This manages to bypass the pagination error where images not pathed properly. Dynamically displays image based on oxford number!, just match property to imgname in static, removed column glycan_photo from sql, add back if needed. Either this or 
+                            <td> <a th:href="@{'/img/glycans/' + ${glycan.databaseID} + '.png'}"></a></td> -->
+                            <td th:text="${glycan.databaseID}"></td>
+>>>>>>> c8ed9d33601d121b324f469e5c0d9a6c5b779a9a
                             <td th:text="${glycan.oxford}"></td>
 					<td th:text="${glycan.neutralmass}"></td>
                                         <td th:text="${glycan.subdir}"></td>
 					<td th:text="${glycan.experimentdetails}"></td>
+<<<<<<< HEAD
+=======
+					<td th:text="${glycan.observedmz2}"></td>
+                                        <td th:text="${glycan.ccs2}"></td>
+>>>>>>> c8ed9d33601d121b324f469e5c0d9a6c5b779a9a
 					<td>
 						<!-- The link which sends GET request to "/showFormForUpdate/{id}" (id is glycan.id) -->
                                                 <div class="myupdate">
